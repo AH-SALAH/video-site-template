@@ -1,0 +1,440 @@
+@import "./variables/variables";
+@import "./mixins/mixins";
+
+
+// ***************************** //
+		// FOOTER SCSS
+// ***************************** //
+
+/* injected classes */
+
+.entry-meta-after:after{
+    background: #ffffff none repeat scroll 0 0;
+    @include border-radius(10px 0 0);
+    content: "";
+    height: 50px;
+    left: 50%;
+    position: absolute;
+    top: 47px !important;
+    @include generic-transform( translate(-25px, 0px) rotate(45deg) );
+    width: 50px;
+    z-index: 0;
+    opacity:1!important;
+    @include transition(all 1s ease-out);
+}
+
+
+.footerbefore:before{
+	content:'';
+	position: absolute;
+	border-top:40px solid rgba(0, 0, 0, 0);
+	border-left:150px solid #ffffff;
+	border-right:150px solid #ffffff;
+	@include border-radius(100% 100% 0 0);
+	left: 0 !important;
+	top: -25px;
+	@include filter( drop-shadow(-30px -30px 7px rgba(255,255,255,1) ) );
+	font-family: fontawesome;
+	width: 50%;
+	z-index: 0;
+	@include transition(all 0.7s ease-out);
+}
+
+
+.footerafter:after{
+	content:'';
+	position: absolute;
+	border-top:40px solid rgba(0, 0, 0, 0);
+	border-left:150px solid #ffffff;
+	border-right:150px solid #ffffff;
+	@include border-radius(100% 100% 0 0);
+	right: -1px !important;
+	top: -25px;
+	@include filter( drop-shadow(30px -30px 7px rgba(255,255,255,1) ) );
+	font-family: fontawesome;
+	width: 50%;
+	z-index: 0;
+	@include transition(all 0.7s ease-out);
+}
+
+
+.footer-row-before:before{
+	background: rgba(128,0,0,1) none repeat scroll 0 0; // maroon
+    @include border-radius(50%);
+    @include box-shadow(0 0 20px 5px #ffd700);
+    color: #ffffff;
+    content: "日本";
+    font-weight: 600;
+    height: 35px;
+    left: 50%;
+    line-height: 35px;
+    position: absolute;
+    text-align: center;
+    top: -50px !important;
+    @include translate(-15px, 0px);
+    width: 35px;
+    opacity:1 !important;
+    @include transition(all 1s ease-out);
+    @include media(XS) { top: -65px !important;}
+}
+
+
+.footer-border-class{border-top: 60px solid rgba(0, 80, 255, 0.4)!important;}
+
+
+// ------------------------------------------------------
+/* footer blog tipster css */
+
+
+.tooltipster-sidetip.tooltipster-shadow .tooltipster-box{
+	@include border-radius(50%!important);
+	// background: rgba(255,255,255,0.7)!important;
+
+	& .tooltipster-content{
+		@include border-radius(50%!important);
+
+		& a.blog-img-link.footer-blog-tipster{
+
+				& > img {
+					width: 120px; 
+					height: 120px; 
+					margin: 5px auto auto auto;
+					// @include border-radius(0);
+					@include filter(drop-shadow(0 1px 1px #000) );
+					
+				}
+
+		}
+
+		& a.blog-ttl{
+			// display: block!important;
+			border-top: 2px solid $primary_color;
+
+			& > h4 {font-size: 14px;}
+
+		}
+	}
+}
+
+
+// ------------------------------------------------------
+// start footer
+
+
+footer.entry-meta{
+	position: relative;
+
+		&:after{
+		    background: #ffffff none repeat scroll 0 0;
+		    @include border-radius(10px 0 0);
+		    content: "";
+		    height: 50px;
+		    left: 50%;
+		    position: absolute;
+		    top: 70px;
+		    @include generic-transform( translate(-25px, 0px) rotate(45deg) );
+		    width: 50px;
+		    z-index: 0;
+		    @include opacity(0);
+
+		}
+
+
+	& .footer{
+		@include bg-linear-gradient(rgba(255, 255, 255, 1), to bottom, #ffffff 90%, #ffebcd 100%);
+	    border-top: 30px solid rgba(0, 0, 0, 0.7);
+	    @include box-shadow( 0 0 2px rgba(0, 0, 0, 0.3) );
+	    margin: 30px -15px auto;
+	    position: relative;
+	    @include transition(all 1s ease-out);
+
+	    &:before{
+	    	content:'';
+	    	position: absolute;
+	    	border-top:40px solid rgba(0, 0, 0, 0);
+	    	border-left:150px solid #ffffff;
+	    	border-right:150px solid #ffffff;
+	    	@include border-radius(100% 100% 0 0);
+	    	left: -50%;
+	    	top: -25px;
+	    	@include filter( drop-shadow(-30px -30px 7px rgba(255,255,255,1) ) );
+	    	font-family: fontawesome;
+	    	width: 50%;
+	    	z-index: 0;
+	    	@include transition(all 0.7s ease-out);
+	    }
+
+	    &:after{
+	    	content:'';
+	    	position: absolute;
+	    	border-top:40px solid rgba(0, 0, 0, 0);
+	    	border-left:150px solid #ffffff;
+	    	border-right:150px solid #ffffff;
+	    	@include border-radius(100% 100% 0 0);
+	    	right: -50%;
+	    	top: -25px;
+	    	@include filter( drop-shadow(30px -30px 7px rgba(255,255,255,1) ) );
+	    	font-family: fontawesome;
+	    	width: 50%;
+	    	z-index: 0;
+	    	@include transition(all 0.7s ease-out);
+	    }
+
+
+	    & .row{
+	    	position: relative;
+
+	    	&:before{
+	    		background: rgba(128,0,0,1) none repeat scroll 0 0; // maroon
+			    @include border-radius(50%);
+			    @include box-shadow(0 0 20px 5px #ffd700);
+			    color: #ffffff;
+			    content: "日本";
+			    font-weight: 600;
+			    height: 35px;
+			    left: 50%;
+			    line-height: 35px;
+			    position: absolute;
+			    text-align: center;
+			    top: 0px;
+			    @include translate(-15px, 0px);
+			    width: 35px;
+			    @include opacity(0);
+	    	}
+/* *********************************** */
+/* index2 footer css*/
+
+			// & .footer-left-container{
+			// 	border-right: 1px solid #cccccc;
+			// 	padding-right: 0;
+
+				& .footer-logo{
+					margin: 15px auto;
+			   		vertical-align: middle;
+			    	z-index: 1;
+				}
+
+				& .blog{
+					border-left: 3px solid;
+			    	border-right: 3px solid;
+			    	margin: 15px auto;
+			    	z-index: 1;
+				    // @include media(M) { border-right: 0 none;}
+				    // @include media(XS) { border-right: 3px solid;}
+
+				    & .media{
+
+					    & .media-body{
+					    	// padding: 5px 0;
+
+					    	& .top-blogs{ 
+
+					    		& > li {
+								    display: inline-block;
+						    		float: left;
+						    		margin: auto auto 10px 20px;
+						    		// @include translate(0vw,100vh);
+						    		@media (max-width: 1370px) and (min-width: 950px){ float: none;}
+
+						    		/* &.blog-li-anime {
+						    			@include animation(blog-li-anime,0.5s ease-out forwards); }
+						    			@include keyframes (blog-li-anime) {
+						    				0%{@include generic-transform( perspective(500px) rotate3d(1,0,0,90deg) translate(0vw,100vh) );}
+						    				25%{@include generic-transform( perspective(500px) rotate3d(1,0,0,45deg) translate(0vw,50vh) );}
+						    				50%{@include generic-transform( perspective(500px) rotate3d(0,0,0,30deg) translate(0vw,0vh) );}
+						    				75%{@include generic-transform( perspective(500px) rotate3d(0,0,0,0deg) translate(0vw,15vh) );}
+						    				85%{@include generic-transform( perspective(500px) rotate3d(0,0,0,10deg) translate(0vw,10vh) );}
+						    				100%{@include generic-transform( perspective(500px) rotate3d(0,0,0,0deg) translate(0vw,0vh) );}
+						    			} */
+						    		
+
+								}
+
+							& .bottom-blogs > li {
+								    display: inline-block;
+								    float: left;
+								    margin: auto auto auto 25px;
+								    @media (max-width: 1370px) and (min-width: 950px){ float: none;}
+								    @include media(M) { margin: auto auto 10px 20px;}
+							}
+							
+							}
+					    }
+					}
+				}
+
+				& .cr{
+					margin: 15px auto;
+			    	position: relative;
+			    	z-index: 1;
+			    	@include media(M) { border-top: 3px solid;padding-top: 10px;}
+				}
+			}
+
+/* ******************************** */
+/* complete index footer css*/ /* index1 */
+
+		& .footer-left-container{
+				border-right: 1px solid #cccccc;
+				padding-right: 0;
+
+		    & .footer-logo {
+					margin: 0 auto;
+				    vertical-align: middle;
+				    z-index: 1;
+
+			    & .media{
+
+			    	& .media-left{
+
+			    		& > span{
+			    			width: 90px;
+			    			height: 90px;
+			    			display: inline-block;
+
+			    			& #logo-footer-obj{width: 100%;max-width: 100%;}
+			    		}
+
+			    	}
+
+			    	& .media-body{
+			    		padding: 5px 0;
+
+			    		& h5{margin-top: 5px;font-weight: 600;font-family: arial;}
+			    	}
+
+			    }
+
+			}
+
+			& .blog {
+			    border-left: 0 none;
+				border-right: 0 none;
+				border-top:1px dotted;
+				border-bottom: 1px dotted;
+			    margin: 0 auto;
+			    z-index: 1;
+				@include media(M) { border-right: 0 none;}
+			    @include media(XS) { border-right: 3px solid;}
+
+
+			    & .media{
+
+				    & .media-body{
+				    	padding: 5px 0;
+
+					    & .top-blogs > li {
+					    	display: inline-block;
+							float: left;
+							margin: auto auto auto 20px;
+							@include translate(0vw,100vh);
+
+							& a {
+
+								& img {
+								    @include filter(drop-shadow(0px 0 1px #000000) );
+								    height: 70px;
+								    padding: 3px;
+								    width: 70px;
+								    position: relative;
+								    @include transition(all 0.3s ease-out);
+
+								    &:hover,&:focus,&:active{
+								    	@include border(1px solid rgba(0, 0, 0, 0.3) );
+
+								    	@include animation(cntr-rotate,2s ease-out alternate infinite);
+								    	@include keyframes (cntr-rotate) {
+								    		0%{bottom: 1px;}
+								    		10%{bottom: 3px;}
+								    		20%{left:1px;}
+								    		30%{left: 3px;}
+								    		40%{top:1px;}
+								    		50%{top:3px;}
+								    		60%{right:1px;}
+								    		70%{right:3px;}
+								    		80%{bottom:1px;}
+								    		90%{bottom:3px;}
+								    		100%{top:0;right:0;bottom:0;left:0;}
+								    		
+								    	}
+
+								    }
+								
+								}
+							}
+
+							&.blog-li-anime {
+				    			@include animation(blog-li-anime,0.3s ease-out forwards); }
+				    			@include keyframes (blog-li-anime) {
+				    				0%{@include generic-transform( perspective(500px) rotate3d(1,0,0,90deg) translate(0vw,100vh) );}
+				    				25%{@include generic-transform( perspective(500px) rotate3d(1,0,0,45deg) translate(0vw,50vh) );}
+				    				50%{@include generic-transform( perspective(500px) rotate3d(0,0,0,30deg) translate(0vw,0vh) );}
+				    				75%{@include generic-transform( perspective(500px) rotate3d(0,0,0,0deg) translate(0vw,10vh) );}
+				    				85%{@include generic-transform( perspective(500px) rotate3d(0,0,0,30deg) translate(0vw,5vh) );}
+				    				100%{@include generic-transform( perspective(500px) rotate3d(0,0,0,0deg) translate(0vw,0vh) );}
+				    			}
+
+						}
+
+						& .bottom-blogs > li {
+						    display: inline-block;
+						    float: left;
+						    margin: auto auto auto 25px;
+						    @media (max-width: 1370px) and (min-width: 950px){ float: none;}
+						    @include media(M) { margin: auto auto 10px 20px;}
+						}
+
+						& img {
+						    @include filter(drop-shadow(0px 0 1px #000000) );
+						    height: 70px;
+						    padding: 3px;
+						    width: 70px;
+						    position: relative;
+						    @include transition(all 0.3s ease-out);
+
+						    &:hover,&:focus,&:active{
+						    	@include border(1px solid rgba(0, 0, 0, 0.3) );
+
+						    	@include animation(cntr-rotate,2s ease-out alternate infinite);
+						    	@include keyframes (cntr-rotate) {
+						    		0%{bottom: 1px;}
+						    		10%{bottom: 3px;}
+						    		20%{left:1px;}
+						    		30%{left: 3px;}
+						    		40%{top:1px;}
+						    		50%{top:3px;}
+						    		60%{right:1px;}
+						    		70%{right:3px;}
+						    		80%{bottom:1px;}
+						    		90%{bottom:3px;}
+						    		100%{top:0;right:0;bottom:0;left:0;}
+						    		
+						    	}
+
+						    }
+						
+						}
+
+					}
+
+				}
+
+			}
+
+
+			& .cr {
+				margin: 0 auto;
+				position: relative;
+				z-index: 1;
+				@include media(M) { border-top: 3px solid;padding-top: 10px;}
+
+			    & p{padding: 5px 0;}
+			}
+
+		}
+
+	// }
+
+	}
+
+}

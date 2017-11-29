@@ -1,0 +1,21 @@
+@import "layout/single-header";
+@import "layout/single-contents";
+@import "layout/single-footer";
+@import "variables/variables";
+@import "mixins/mixins";
+
+// ====================================
+			//start single scss/css
+// ===================================== 
+
+.shelfed{
+	@include animation(shelfed,0.5s ease-out forwards);
+}
+
+@include keyframes (shelfed) {
+	0%{ @include generic-transform( perspective(500px) rotate3d(-1,0,0,90deg) translate(0,100vh) ); }
+	100%{@include generic-transform( perspective(500px) rotate3d(0,0,0,0deg) translate(0,0vh) );}
+}
+
+// ----------------------------
+// #ascrail2002{ opacity: 0!important; filter:alpha(opacity=0!important);}

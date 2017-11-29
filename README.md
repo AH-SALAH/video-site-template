@@ -1,5 +1,7 @@
 ## Premium Video Site Template v1.0
 
+> Premium Multipurpose Video Site Theme
+
 [# Demo](http://videotemplate.nichesite.org)
 
 <strong> - Tech Used: </strong>

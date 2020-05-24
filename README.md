@@ -2,7 +2,7 @@
 
 > Premium Multipurpose Video Site Theme
 
-[# Demo](https://ah-salah.github.io/video-site-template/index.html)
+[# Demo](https://ah-salah.github.io/video-site-template/)
 
 <strong> - Tech Used: </strong>
 
